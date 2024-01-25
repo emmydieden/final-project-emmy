@@ -1,3 +1,4 @@
+
 * {
   margin: 0;
 }
@@ -12,7 +13,14 @@ h1,
 h2,
 h3,
 h4 {
-  font-family: Raleway; /*TESSSSSST*/
+  /* font-family: Raleway;  */
+  /* font-family: Comfortaa; */
+  font-family: Quicksand;
+}
+
+h1{
+  color: #273006; 
+  font-weight: 600;
 }
 
 p {
@@ -42,6 +50,5 @@ button {
 
 label {
   font-family: Raleway;
-  color: white;
   font-size: 1.1rem;
 }

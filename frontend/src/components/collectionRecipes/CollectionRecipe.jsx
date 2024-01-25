@@ -5,13 +5,25 @@ import { Link } from "react-router-dom";
 import "./collectionRecipe.css";
 
 //Paths to images 
+// const imageUrls = [
+//   "/recipe-imgs/campfire-896196_1280.jpg",
+//   "/recipe-imgs/camping-cooker-1853680_1280.jpg",
+//   "/recipe-imgs/picnic-4246724_1280.jpg",
+//   "/recipe-imgs/pot-5901086_1280.jpg",
+//   "/recipe-imgs/hero-image.jpg",
+// ];
+
 const imageUrls = [
-  "/recipe-imgs/campfire-896196_1280.jpg",
-  "/recipe-imgs/camping-cooker-1853680_1280.jpg",
-  "/recipe-imgs/picnic-4246724_1280.jpg",
-  "/recipe-imgs/pot-5901086_1280.jpg",
-  "/recipe-imgs/hero-image.jpg",
-];
+  "/public/icons/bag.svg", 
+  "/public/icons/cooking-fire.svg", 
+  "/public/icons/fire.svg",
+  "/public/icons/food.svg", 
+  "/public/icons/mountains.svg", 
+  "/public/icons/pan-love.svg", 
+  "/public/icons/pot.svg", 
+  "/public/icons/stove.svg", 
+  "/public/icons/thermos.svg", 
+]
 
 export const CollectionRecipe = ({ recipe, index }) => {
   // Calculate the index of the image to use based on the recipe index
@@ -27,7 +39,7 @@ export const CollectionRecipe = ({ recipe, index }) => {
         <div className="collection-recipe-image-container">
           <img src={selectedImageUrl} alt={recipe.title} />
           {/* Overlay div for the gradient */}
-          <div className="gradient-overlay"></div>{" "}
+          {/* <div className="gradient-overlay"></div>{" "} */}
         </div>
         <h2>{recipe.title}</h2>
 

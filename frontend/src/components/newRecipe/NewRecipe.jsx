@@ -62,7 +62,7 @@ export const NewRecipe = () => {
             <RecipeInfoDetails userInput={newRecipe.userInput} />
             <div className="details-image-container">
               <ImageDetails
-                src="/recipe-imgs/campfire-896196_1280.jpg"
+                src="/public/icons/cooking-fire.svg"
                 alt="outdoor cooking"
               />
               <div className="details-image-gradient-overlay"></div>{" "}
