@@ -23,6 +23,12 @@
     height: 200px; 
 }
 
+.react-arrow {
+    width: 50px; 
+    height: 50px; 
+    color: #273006; 
+}
+
 /* ---------TABLET VIEW---------- */
 @media (min-width: 667px) and (max-width: 1024px) {
     .hero {

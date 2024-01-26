@@ -1,8 +1,11 @@
 
 
 .collection-recipes {
-    background-color: #d1d8bd; 
-    /* background-color: #f5f5f5;  */
+    /* background-color: #d1d8bd;  */
+    background-color: #f5f5f5;  
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
     
 }
 
@@ -23,6 +26,7 @@
     grid-template-columns: repeat(2, 1fr);
     gap: 1rem;
     margin: 0 50px; 
+    padding: 50px 0; 
 }
 
 .error-message-container {
@@ -92,7 +96,8 @@
     }
 
     .recipe-grid {
-        grid-template-columns: repeat(4, 1fr);
+        grid-template-columns: repeat(3, 1fr);
+        width: 60%; 
     }
 
     .collection-recipes h3 {

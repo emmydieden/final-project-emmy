@@ -1,8 +1,6 @@
 import { PromptForm } from "../PromptForm";
 import "./createSection.css"
 
-import React from 'react'
-
 export const CreateSection = () => {
   return (
    <section className="create-section">

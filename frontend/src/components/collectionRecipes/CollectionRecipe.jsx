@@ -15,14 +15,14 @@ import "./collectionRecipe.css";
 
 const imageUrls = [
   "/public/icons/bag.svg", 
+  "/public/icons/pot.svg", 
   "/public/icons/cooking-fire.svg", 
   "/public/icons/fire.svg",
   "/public/icons/food.svg", 
   "/public/icons/mountains.svg", 
-  "/public/icons/pan-love.svg", 
-  "/public/icons/pot.svg", 
   "/public/icons/stove.svg", 
   "/public/icons/thermos.svg", 
+  "/public/icons/pan-love.svg", 
 ]
 
 export const CollectionRecipe = ({ recipe, index }) => {
@@ -36,6 +36,13 @@ export const CollectionRecipe = ({ recipe, index }) => {
       className="collection-recipe-link"
     >
       <section className="collection-recipe-card">
+      { <div className="user-input-collection">
+          {recipe.userInput.map((ingredient, ingredientIndex) => (
+            <div className="recipe-tag" key={ingredientIndex}>
+              {ingredient}
+            </div>
+          ))}
+        </div> }
         <div className="collection-recipe-image-container">
           <img src={selectedImageUrl} alt={recipe.title} />
           {/* Overlay div for the gradient */}
@@ -43,13 +50,7 @@ export const CollectionRecipe = ({ recipe, index }) => {
         </div>
         <h2>{recipe.title}</h2>
 
-        <div className="user-input-collection">
-          {recipe.userInput.map((ingredient, ingredientIndex) => (
-            <div className="recipe-tag" key={ingredientIndex}>
-              {ingredient}
-            </div>
-          ))}
-        </div>
+        
       </section>
     </Link>
   );

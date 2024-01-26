@@ -51,8 +51,8 @@ export const CollectionRecipes = () => {
         </div>)}
 
       {/* Conditionally render the heading only when it is no error message for fetching all recipes */}
-      {!errorMessageFetchAll && (
-        <h3>Latest AI-Generated Recipes</h3>)}
+       {!errorMessageFetchAll && (
+        <h1>Latest Recipes</h1>)} 
 
       <div className="recipe-grid">
         {limitedRecipes.map((recipe, index) => (

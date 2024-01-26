@@ -85,10 +85,10 @@ export const RecipeDetails = () => {
             <HeadingDetails title={foundRecipe.title} />
             <RecipeInfoDetails userInput={foundRecipe.userInput} />
             <div className="details-image-container">
-              <ImageDetails
+              {/* <ImageDetails
                 src="/public/icons/cooking-fire.svg"
                 alt="outdoor cooking"
-              />
+              /> */}
               {/* Overlay div for the gradient */}
               <div className="details-image-gradient-overlay"></div>{" "}
 
@@ -100,7 +100,7 @@ export const RecipeDetails = () => {
           </>
         ) : (
           <div className="details-desktop-container">
-            <div className="details-image-container"></div>
+            {/* <div className="details-image-container"></div> */}
             {/* <ImageDetails src="/recipe-imgs/campfire-896196_1280.jpg" alt="outdoor cooking" /> */}
             <div className="details-text-container">
               <HeadingDetails title={foundRecipe.title} />

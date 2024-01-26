@@ -21,7 +21,6 @@ export const Home = () => {
     <>
       <HeroSection />
       <CreateSection />
-      <Spinner/>
       {isGenerating ? (
         <div className="spinner-container-new">
           {" "}

@@ -96,6 +96,8 @@
 
 .details-desktop-container {
   display: flex;
+  justify-content: center;
+  margin: 100px 0; 
   /*Talign-items: center; Tyvärr inte snyggt när man byter mellan ingredients och method */
 
 }

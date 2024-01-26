@@ -1,6 +1,7 @@
 import { useRef } from "react";
 import "./heroSection.css";
 import { Arrow } from "../arrow/Arrow";
+import { IoIosArrowDown } from "react-icons/io"
 
 export const HeroSection = () => {
   const nextSectionRef = useRef(null);
@@ -27,9 +28,8 @@ export const HeroSection = () => {
           </div>
           <img className="hero-icon" src="/public/icons/hero-icon-2.svg" alt="" />
         </div>
-
-        <Arrow onClick={scrollToNextSection}/>
-        <div className="box" onClick={scrollToNextSection}></div>
+        <IoIosArrowDown className="react-arrow" onClick={scrollToNextSection}/>
+        {/* <Arrow onClick={scrollToNextSection}/> */}
       </section>
       <div ref={nextSectionRef}></div>
     </>
