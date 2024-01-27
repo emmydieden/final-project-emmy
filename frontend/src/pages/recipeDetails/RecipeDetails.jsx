@@ -4,11 +4,11 @@ import { useParams, useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
 //Importing components
 import { RecipeInfoDetails } from "../../components/recipeDetailsComponents/recipeInfoDetails/RecipeInfoDetails";
-import { HeadingDetails } from "../../components/recipeDetailsComponents/headingDetails/HeadingDetails"
-import { ImageDetails } from "../../components/recipeDetailsComponents/imageDetails/ImageDetails"
-import { DescriptionDetails } from "../../components/recipeDetailsComponents/descriptionDetails/DescriptionDetails"
-import { IngredientsDetails } from "../../components/recipeDetailsComponents/ingredientsDetails/IngredientsDetails"
-import { MethodDetails } from "../../components/recipeDetailsComponents/methodDetails/MethodDetails.jsx"
+import { HeadingDetails } from "../../components/recipeDetailsComponents/headingDetails/HeadingDetails";
+import { ImageDetails } from "../../components/recipeDetailsComponents/imageDetails/ImageDetails";
+import { DescriptionDetails } from "../../components/recipeDetailsComponents/descriptionDetails/DescriptionDetails";
+import { IngredientsDetails } from "../../components/recipeDetailsComponents/ingredientsDetails/IngredientsDetails";
+import { MethodDetails } from "../../components/recipeDetailsComponents/methodDetails/MethodDetails.jsx";
 import { TabButton } from "../../components/buttons/tabButton/TabButton";
 //Importing recipeStore
 import { recipeStore } from "../../stores/recipeStore";
@@ -78,41 +78,57 @@ export const RecipeDetails = () => {
 
   // Render the component based on whether it is in mobile or desktop view
   return (
+    // <section className="recipe-details">
+    //   {isMobileView ? (
+    //     <>
+    //       <HeadingDetails title={foundRecipe.title} />
+    //       <RecipeInfoDetails userInput={foundRecipe.userInput} />
+    //       <div className="details-image-container">
+    //         {/* <ImageDetails
+    //           src="/public/icons/cooking-fire.svg"
+    //           alt="outdoor cooking"
+    //         /> */}
+    //         {/* Overlay div for the gradient */}
+    //         <div className="details-image-gradient-overlay"></div>{" "}
+
+    //       </div>
+
+    //       <DescriptionDetails description={foundRecipe.description} />
+    //       <IngredientsDetails ingredients={foundRecipe.ingredients} />
+    //       <MethodDetails instructions={foundRecipe.instructions} />
+    //     </>
+    //   ) : (
+    //     <div className="details-desktop-container">
+    //       {/* <div className="details-image-container"></div> */}
+    //       {/* <ImageDetails src="/recipe-imgs/campfire-896196_1280.jpg" alt="outdoor cooking" /> */}
+    //       <div className="details-text-container">
+    //         <HeadingDetails title={foundRecipe.title} />
+    //         <RecipeInfoDetails userInput={foundRecipe.userInput} />
+    //         <DescriptionDetails description={foundRecipe.description} />
+    //         <TabButton
+    //           ingredients={foundRecipe.ingredients}
+    //           instructions={foundRecipe.instructions}
+    //         />
+    //       </div>
+    //     </div>
+    //   )}
+    // </section>
     <>
       <section className="recipe-details">
-        {isMobileView ? (
-          <>
-            <HeadingDetails title={foundRecipe.title} />
-            <RecipeInfoDetails userInput={foundRecipe.userInput} />
-            <div className="details-image-container">
-              {/* <ImageDetails
-                src="/public/icons/cooking-fire.svg"
-                alt="outdoor cooking"
-              /> */}
-              {/* Overlay div for the gradient */}
-              <div className="details-image-gradient-overlay"></div>{" "}
-
-            </div>
-
-            <DescriptionDetails description={foundRecipe.description} />
-            <IngredientsDetails ingredients={foundRecipe.ingredients} />
-            <MethodDetails instructions={foundRecipe.instructions} />
-          </>
-        ) : (
-          <div className="details-desktop-container">
-            {/* <div className="details-image-container"></div> */}
-            {/* <ImageDetails src="/recipe-imgs/campfire-896196_1280.jpg" alt="outdoor cooking" /> */}
-            <div className="details-text-container">
-              <HeadingDetails title={foundRecipe.title} />
-              <RecipeInfoDetails userInput={foundRecipe.userInput} />
-              <DescriptionDetails description={foundRecipe.description} />
-              <TabButton
-                ingredients={foundRecipe.ingredients}
-                instructions={foundRecipe.instructions}
-              />
-            </div>
+        <div className="details-content-wrapper">
+          {/* <div className="details-image-container"></div> */}
+          {/* <ImageDetails src="/recipe-imgs/campfire-896196_1280.jpg" alt="outdoor cooking" /> */}
+          <HeadingDetails title={foundRecipe.title} />
+          <RecipeInfoDetails userInput={foundRecipe.userInput} />
+          <DescriptionDetails description={foundRecipe.description} />
+          <div className="tab-button-container">
+            {" "}
+            <TabButton
+              ingredients={foundRecipe.ingredients}
+              instructions={foundRecipe.instructions}
+            />
           </div>
-        )}
+        </div>
       </section>
     </>
   );

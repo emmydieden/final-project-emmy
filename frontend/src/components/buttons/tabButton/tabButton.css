@@ -1,6 +1,6 @@
 .tab-button {
     display: inline-flex;
-    background-color: #dbdbdb;
+    background-color: #d1d8bd; 
     border-radius: 50px;
     margin-top: 15px;
 }
@@ -10,6 +10,7 @@
     background: transparent;
     border-right: solid white 5px;
     padding: 1em;
+    font-weight: 600;
 }
 
 .tab-button-method {
@@ -20,8 +21,11 @@
 
 .tab-button-method.active,
 .tab-button-ingredients.active  {
-    background-color:  #173e34;
-    color: white;
+    /* background-color: #d1d8bd;
+    color: #273006;  */
+    background-color:  #273006;
+     color: white; 
+     font-weight: 600;
   }
 
   .tab-button-ingredients.active {

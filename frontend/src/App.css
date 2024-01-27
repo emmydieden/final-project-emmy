@@ -16,6 +16,7 @@ h4 {
   /* font-family: Raleway;  */
   /* font-family: Comfortaa; */
   font-family: Quicksand;
+  color: #273006;
 }
 
 h1{
@@ -25,11 +26,12 @@ h1{
 
 p {
   font-family: Quicksand;
+  color: #273006;
 }
-
 
 li {
   font-family: Quicksand; 
+  color: #273006;
 }
 
 button {
