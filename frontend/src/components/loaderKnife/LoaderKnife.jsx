@@ -1,17 +1,17 @@
 import React from 'react'
 import Lottie from "react-lottie"
-import AnimationFire from "/src/assets/lottie-animations/AnimationFire.json"
+import AnimationKnife from "/src/assets/lottie-animations/AnimationKnife.json"
 
-export const Spinner = () => {
+export const LoaderKnife = () => {
     const defaultOptions = {
         loop: true,
         autoplay: true,
-        animationData: AnimationFire, 
+        animationData: AnimationKnife, 
         rendererSettings: {
           preserveAspectRatio: 'xMidYMid slice',
         },
     }
   return (
-  <Lottie options={defaultOptions} height={300} width={300}/>
+    <Lottie options={defaultOptions} height={250} width={250}/>
   )
 }

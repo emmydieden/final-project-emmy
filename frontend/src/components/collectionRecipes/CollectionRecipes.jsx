@@ -3,15 +3,22 @@
 import { useEffect, useState } from "react";
 import { recipeStore } from "../../stores/recipeStore";
 import { CollectionRecipe } from "../collectionRecipes/CollectionRecipe";
+import { LoaderKnife } from "../loaderKnife/LoaderKnife";
 import "./collectionRecipes.css";
 
 // Define the CollectionRecipes component
 export const CollectionRecipes = () => {
   // Destructure functions from the recipeStore
-  const { recipes, fetchCollectionRecipes, errorMessageGeneration, setErrorMessageGeneration, errorMessageFetchAll, setNewRecipe } = recipeStore();
+  const {
+    recipes,
+    fetchCollectionRecipes,
+    errorMessageGeneration,
+    setErrorMessageGeneration,
+    errorMessageFetchAll,
+    setNewRecipe,
+  } = recipeStore();
   // Defining a loading state
   const [loading, setLoading] = useState(true);
-
 
   // Use the useEffect hook to fetch recipes when the component mounts
   useEffect(() => {
@@ -19,8 +26,8 @@ export const CollectionRecipes = () => {
       try {
         await fetchCollectionRecipes();
         setLoading(false);
-        setErrorMessageGeneration("")
-        setNewRecipe(false)
+        setErrorMessageGeneration("");
+        setNewRecipe(false);
       } catch (error) {
         console.error("Error fetching data:", error);
         setLoading(false);
@@ -31,8 +38,15 @@ export const CollectionRecipes = () => {
 
   //loading state (Need to set this, so rendering doesn't happen BEFORE fetch!)
   if (loading) {
-    return <div className="spinner-container">
-      <div className="spinner"></div><p>Loading AI-generated recipes. Be patient, this might take a minute or two!</p></div>;
+    return (
+      <div className="spinner-container">
+        <LoaderKnife />
+        <p>
+          Loading recipes. Be patient, this might take a minute or
+          two!
+        </p>
+      </div>
+    );
   }
 
   // Slice the recipes array to get only the first 12 recipes
@@ -41,26 +55,30 @@ export const CollectionRecipes = () => {
   // Render the component with a list of recipes (map over the recipes and render each recipe's ingredients and instructions)
   return (
     <section className="collection-recipes">
-    
       {/* Error message from RecipeStore rendered if there was something wrong during generation */}
-      {errorMessageGeneration && <div className="error-message-container"><p className="error-message-generation">{errorMessageGeneration}</p></div>}
+      {errorMessageGeneration && (
+        <div className="error-message-container">
+          <p className="error-message-generation">{errorMessageGeneration}</p>
+        </div>
+      )}
 
       {/* Error message from RecipeStore rendered if something is wrong with the fetch/database/Render */}
       {errorMessageFetchAll && (
         <div className="error-message-container">
           <p className="error-message-generation">{errorMessageFetchAll}</p>
-        </div>)}
+        </div>
+      )}
 
       {/* Conditionally render the heading only when it is no error message for fetching all recipes */}
-       
-  <div className="collection-recipes-wrapper">
+
+      <div className="collection-recipes-wrapper">
         <h1>Latest Recipes</h1>
 
-      <div className="recipe-grid">
-        {limitedRecipes.map((recipe, index) => (
-          <CollectionRecipe key={recipe._id} recipe={recipe} index={index} />
-        ))}
-      </div>
+        <div className="recipe-grid">
+          {limitedRecipes.map((recipe, index) => (
+            <CollectionRecipe key={recipe._id} recipe={recipe} index={index} />
+          ))}
+        </div>
       </div>
     </section>
   );
