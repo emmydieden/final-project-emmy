@@ -11,9 +11,15 @@ import { IngredientsDetails } from "../recipeDetailsComponents/ingredientsDetail
 import { MethodDetails } from "../recipeDetailsComponents/methodDetails/MethodDetails";
 import { TabButton } from "../buttons/tabButton/TabButton";
 
+import { Spinner } from "../spinner/Spinner";
+
 export const NewRecipe = () => {
-  const { newRecipe, errorMessageGeneration, fetchCollectionRecipes } =
-    recipeStore();
+  const {
+    newRecipe,
+    errorMessageGeneration,
+    fetchCollectionRecipes,
+    isGenerating,
+  } = recipeStore();
   const [isMobileView, setIsMobileView] = useState(window.innerWidth < 1025);
   const recipeDetailsRef = useRef(null); //This is for scrolling
 
@@ -27,37 +33,33 @@ export const NewRecipe = () => {
     return null;
   }
 
-  //Setting the function HandleResize (Components show in different order depending on if its mobile/tablet or desktop)
-  useEffect(() => {
-    const handleResize = () => {
-      setIsMobileView(window.innerWidth < 1025);
-    };
-    window.addEventListener("resize", handleResize);
-
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []);
-
+ 
   useEffect(() => {
     // Scroll into view when the component mounts
     if (recipeDetailsRef.current) {
       recipeDetailsRef.current.scrollIntoView({ behavior: "smooth" });
     }
-  }, [newRecipe]); // Scroll into view whenever newRecipe changes
+  }, [isGenerating]); // Scroll into view whenever newRecipe changes
 
   return (
     <>
-      <section
-        className="recipe-details new-recipe-section"
-        ref={recipeDetailsRef}
-      >
-        <h3 className="new-recipe-section-heading">
-          Your freshly AI generated outdoor meal
-        </h3>
-        {/*Conditional rendering of compoenents in mobile/tablet view or desktop */}
-        {isMobileView ? (
-          <>
+    
+  
+      {isGenerating ? (
+        <div className="spinner-container-new" ref={recipeDetailsRef}>
+          {" "}
+          {/*CSS for spinner in App.css and collectionRecipes.css*/}
+          <Spinner />
+          <p>Be patient, you're just a minute away from your delicious meal!</p>
+        </div>
+      ) : (
+        <section
+          className="recipe-details"
+          ref={recipeDetailsRef}
+        >
+          <div className="outer-wrapper">
+         <h1>Your new recipe</h1>
+          <div className="details-content-wrapper">
             <HeadingDetails title={newRecipe.title} />
             <RecipeInfoDetails userInput={newRecipe.userInput} />
             <div className="details-image-container">
@@ -70,24 +72,14 @@ export const NewRecipe = () => {
             </div>
 
             <DescriptionDetails description={newRecipe.description} />
-            <IngredientsDetails ingredients={newRecipe.ingredients} />
-            <MethodDetails instructions={newRecipe.instructions} />
-          </>
-        ) : (
-          <div className="details-desktop-container">
-            <div className="details-image-container"></div>
-            <div className="details-text-container">
-              <HeadingDetails title={newRecipe.title} />
-              <RecipeInfoDetails userInput={newRecipe.userInput} />
-              <DescriptionDetails description={newRecipe.description} />
-              <TabButton
-                ingredients={newRecipe.ingredients}
-                instructions={newRecipe.instructions}
-              />
+            <TabButton
+              ingredients={newRecipe.ingredients}
+              instructions={newRecipe.instructions}
+            />
             </div>
-          </div>
-        )}
-      </section>
+            </div>
+        </section>
+      )}
     </>
   );
 };

@@ -78,6 +78,7 @@ export const RecipeDetails = () => {
   return (
     <>
       <section className="recipe-details">
+      <div className="outer-wrapper">
         <div className="details-content-wrapper">
           {/* <div className="details-image-container"></div> */}
           {/* <ImageDetails src="/recipe-imgs/campfire-896196_1280.jpg" alt="outdoor cooking" /> */}
@@ -91,6 +92,7 @@ export const RecipeDetails = () => {
               instructions={foundRecipe.instructions}
             />
           </div>
+        </div>
         </div>
       </section>
     </>

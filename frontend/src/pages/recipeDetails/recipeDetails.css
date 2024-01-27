@@ -4,16 +4,27 @@
   align-items: center;
 }
 
+.outer-wrapper {
+  display: flex;
+flex-direction: column;
+align-items: center;
+width: 80%; 
+margin: 50px 0; 
+gap: 20px; 
+}
+
+.outer-wrapper h1 {
+  align-self: flex-start;
+}
+
 .details-content-wrapper {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   border: 3px solid #273006;
   border-radius: 10px;
   background-color: #f5f5f5;
-  padding: 30px;
-  width: 70%;
-  margin: 50px 0;
+  padding: 30px; 
 }
 
 .recipe-details h1 {
@@ -102,9 +113,12 @@
     font-size: 32px;
   }
 
+  .outer-wrapper {
+    width: 80%;
+  }
+
   .details-content-wrapper {
     align-items: flex-start;
-    width: 60%;
   }
 
   .tab-button-container {
@@ -130,9 +144,12 @@
     font-size: 32px;
   }
 
+  .outer-wrapper {
+    width: 60%;
+  }
+
   .details-content-wrapper {
     align-items: flex-start;
-    width: 50%;
   }
 
   .tab-button-container {
