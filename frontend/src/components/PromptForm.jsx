@@ -40,7 +40,7 @@ export const PromptForm = () => {
   };
 
   // Placeholder texts for each textarea
-  const placeholders = ["E.g. Pasta", "E.g. Egg", "E.g. Basil"];
+  const placeholders = ["Ingredient 1...", "Ingredient 2...", "Ingredient 3..."];
 
   // Render the component. Form element
   return (
@@ -85,7 +85,7 @@ export const PromptForm = () => {
           </div>
           <div className="generate-button-container">
             <button className="generate-button" type="submit">
-              Generate Recipe
+              Create Recipe
             </button>
           </div>
         </form>

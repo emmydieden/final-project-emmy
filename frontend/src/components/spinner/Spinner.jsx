@@ -1,6 +1,6 @@
 import React from 'react'
 import Lottie from "react-lottie"
-import AnimationFire from "/public/lottie-animations/AnimationFire.json"
+import AnimationFire from "/src/assets/lottie-animations/AnimationFire.json"
 
 export const Spinner = () => {
     const defaultOptions = {

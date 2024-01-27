@@ -24,20 +24,68 @@ h1{
 }
 
 p {
-  font-family: Raleway;
-  font-size: 1.1em;
+  font-family: Quicksand;
 }
 
 
 li {
-  font-family: Raleway;
-  font-size: 1.1em;
-  line-height: 1.5;
+  font-family: Quicksand; 
 }
 
 button {
-  font-family: Raleway;
-  font-size: 1rem;
+  font-family: Quicksand; 
+  font-size: 16px;
+}
+
+label {
+  font-family: Quicksand;
+  display: flex;
+  align-items: center;
+}
+
+/* ---------TABLET VIEW---------- */
+@media (min-width: 667px) and (max-width: 1024px) {
+
+  p {
+    font-size: 18px; 
+  }
+  
+  
+  li {
+    font-size: 18px; 
+  }
+  
+  button {
+    font-size: 18px; 
+  }
+  
+  label {
+    font-size: 18px; 
+  }
+  
+
+}
+
+/* ---------DESKTOP VIEW---------- */
+@media (min-width: 1025px) {
+
+  p {
+    font-size: 18px; 
+  }
+  
+  
+  li {
+    font-size: 18px; 
+  }
+  
+  button {
+    font-size: 18px; 
+  }
+  
+  label {
+    font-size: 18px; 
+  }
+
 }
 
 .spinner-container-new {
@@ -46,9 +94,4 @@ button {
   flex-direction: column;
   align-items: center;
   color: #286052;
-}
-
-label {
-  font-family: Raleway;
-  font-size: 1.1rem;
 }

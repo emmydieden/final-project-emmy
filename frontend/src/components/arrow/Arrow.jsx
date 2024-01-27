@@ -1,6 +1,6 @@
 import React from 'react'
 import Lottie from "react-lottie"
-import AnimationArrow from "/public/lottie-animations/AnimationArrow.json"
+import AnimationArrow from "/src/assets/lottie-animations/AnimationArrow.json"
 
 export const Arrow = ({onClick}) => {
     const defaultOptions = {

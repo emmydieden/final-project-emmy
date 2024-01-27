@@ -11,14 +11,9 @@
   background-color: #d1d8bd;
 }
 
-
 .collection-recipe-card h2 {
   font-size: 18px;
   font-weight: 600;
-}
-
-.collection-recipe-card h2:hover {
-  color: #86bca8;
 }
 
 .collection-recipe-card p {

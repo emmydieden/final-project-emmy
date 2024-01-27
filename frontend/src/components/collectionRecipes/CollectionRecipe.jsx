@@ -14,15 +14,15 @@ import "./collectionRecipe.css";
 // ];
 
 const imageUrls = [
-  "/public/icons/bag.svg", 
-  "/public/icons/pot.svg", 
-  "/public/icons/cooking-fire.svg", 
-  "/public/icons/fire.svg",
-  "/public/icons/food.svg", 
-  "/public/icons/mountains.svg", 
-  "/public/icons/stove.svg", 
-  "/public/icons/thermos.svg", 
-  "/public/icons/pan-love.svg", 
+  "/icons/bag.svg", 
+  "/icons/pot.svg", 
+  "/icons/cooking-fire.svg", 
+  "/icons/fire.svg",
+  "/icons/food.svg", 
+  "/icons/mountains.svg", 
+  "/icons/stove.svg", 
+  "/icons/thermos.svg", 
+  "/icons/pan-love.svg", 
 ]
 
 export const CollectionRecipe = ({ recipe, index }) => {

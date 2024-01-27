@@ -41,6 +41,7 @@ export const CollectionRecipes = () => {
   // Render the component with a list of recipes (map over the recipes and render each recipe's ingredients and instructions)
   return (
     <section className="collection-recipes">
+    
       {/* Error message from RecipeStore rendered if there was something wrong during generation */}
       {errorMessageGeneration && <div className="error-message-container"><p className="error-message-generation">{errorMessageGeneration}</p></div>}
 
@@ -51,13 +52,15 @@ export const CollectionRecipes = () => {
         </div>)}
 
       {/* Conditionally render the heading only when it is no error message for fetching all recipes */}
-       {!errorMessageFetchAll && (
-        <h1>Latest Recipes</h1>)} 
+       
+  <div className="collection-recipes-wrapper">
+        <h1>Latest Recipes</h1>
 
       <div className="recipe-grid">
         {limitedRecipes.map((recipe, index) => (
           <CollectionRecipe key={recipe._id} recipe={recipe} index={index} />
         ))}
+      </div>
       </div>
     </section>
   );

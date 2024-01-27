@@ -18,6 +18,7 @@ export const HeroSection = () => {
     <>
       <section className="hero">
         <div className="hero-content-wrapper">
+        <img className="hero-icon" src="/icons/hero-icon-3.svg" alt="" />
           <div className="hero-text">
             {" "}
             <h1>Elevate your Outdoor Cooking Adventure</h1>
@@ -26,7 +27,7 @@ export const HeroSection = () => {
               delicious camping stove recipes with just three ingredients!
             </p>
           </div>
-          <img className="hero-icon" src="/public/icons/hero-icon-2.svg" alt="" />
+         
         </div>
         <IoIosArrowDown className="react-arrow" onClick={scrollToNextSection}/>
         {/* <Arrow onClick={scrollToNextSection}/> */}
