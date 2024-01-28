@@ -1,0 +1,43 @@
+.login-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; 
+}
+
+.login-container {
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
+    border: 3px solid #273006;
+    background-color: #d1d8bd;
+    border-radius: 10px; 
+    padding: 20px; 
+    width: 70%; 
+    margin-bottom: 100px;
+}
+
+.login-container p {
+    font-weight: 600;
+}
+
+.login-container img {
+    height: 50px; 
+    width: 50px; 
+}
+
+/* ---------TABLET VIEW---------- */
+@media (min-width: 667px) and (max-width: 1024px) {
+    .login-container {
+        width: 50%; 
+    }
+
+}
+
+/* ---------DESKTOP VIEW---------- */
+@media (min-width: 1025px) {
+    .login-container {
+        width: 30%; 
+    }
+}

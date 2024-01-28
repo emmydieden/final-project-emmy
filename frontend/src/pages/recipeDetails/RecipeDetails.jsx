@@ -8,6 +8,7 @@ import { HeadingDetails } from "../../components/recipeDetailsComponents/heading
 import { DescriptionDetails } from "../../components/recipeDetailsComponents/descriptionDetails/DescriptionDetails";
 import { TabButton } from "../../components/buttons/tabButton/TabButton";
 import { LoaderKnife } from "../../components/loaderKnife/LoaderKnife";
+import { IoIosArrowBack } from "react-icons/io";
 //Importing recipeStore
 import { recipeStore } from "../../stores/recipeStore";
 
@@ -79,6 +80,8 @@ export const RecipeDetails = () => {
     <>
       <section className="recipe-details">
       <div className="outer-wrapper">
+        <div className="arrow-container"> <IoIosArrowBack/></div>
+     
         <div className="details-content-wrapper">
           {/* <div className="details-image-container"></div> */}
           {/* <ImageDetails src="/recipe-imgs/campfire-896196_1280.jpg" alt="outdoor cooking" /> */}

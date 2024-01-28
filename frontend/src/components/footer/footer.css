@@ -1,7 +1,6 @@
 .footer {
-    height: 17vh;
-    padding: 1rem;
-    background-color: #173e34;
+    padding: 20px 0; 
+    background-color: #d1d8bd;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -9,19 +8,19 @@
     gap: 5%;
 }
 
-.footer-logo {
-    width: 180px;
+.logo-footer {
+    font-weight: 300;
+    font-size: 30px;
 }
 
 .footer p {
-    color: white;
-    line-height: 1.5;
+    color: #273006;
     text-align: center;
 }
 
 .footer p a {
     font-weight: bolder;
-    color: white;
+    color: #273006;
 }
 
 .footer nav ul {
@@ -35,7 +34,6 @@
 }
 
 .footer-nav a {
-    font-size: 3vh;
 }
 
 .footer-nav svg {

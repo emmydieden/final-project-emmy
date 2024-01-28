@@ -1,0 +1,18 @@
+.hamburger-cross-icon {
+    color:  #273006;
+    height: 40px; 
+    width: 40px; 
+}
+
+/* ---------TABLET VIEW---------- */
+@media (min-width: 667px) and (max-width: 1024px) {
+  
+}
+
+/* ---------DESKTOP VIEW---------- */
+@media (min-width: 1025px) {
+   .hamburger-cross {
+    display: none; 
+   }
+  
+}

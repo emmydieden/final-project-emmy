@@ -1,11 +1,11 @@
 import "./hamburgerMenu.css"
-import { RxHamburgerMenu } from "react-icons/rx";
+import { IoMenu } from "react-icons/io5";
 
 export const HamburgerMenu = () => {
   return (
     <>
     <div className="hamburger-menu">
-    <RxHamburgerMenu className="hamburger-menu-icon"/>
+    <IoMenu className="hamburger-menu-icon"/>
     </div>
     
     </>

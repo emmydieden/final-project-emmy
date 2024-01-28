@@ -1,3 +1,12 @@
+.arrow-container {
+  display: flex;
+  width: 100%; 
+}
+
+.arrow-container svg {
+  height: 3%; 
+  width: 30px; 
+}
 .recipe-details {
   display: flex;
   flex-direction: column;

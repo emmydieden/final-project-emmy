@@ -1,7 +1,12 @@
-import React from 'react'
+import "./login.css";
 
 export const Login = () => {
   return (
-    <div>Login</div>
-  )
-}
+    <section className="login-section">
+      <div className="login-container">
+        <img src="/public/icons/construction-icon.svg" alt="" />
+        <p>Login function is under construction</p>
+      </div>
+    </section>
+  );
+};

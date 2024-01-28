@@ -39,6 +39,8 @@ export const recipeStore = create((set, get) => ({
   //Initilazing state for glutenfree preference
   isGlutenFree: false,
   setIsGlutenFree: (isGlutenFree) => set({ isGlutenFree }),
+  hamburgerOpen: false, 
+  setHamburgerOpen: (hamburgerOpen) => set({ hamburgerOpen}), 
 
   // Function to fetch a new recipe from the API
   fetchNewRecipe: async () => {
