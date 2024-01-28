@@ -37,17 +37,17 @@ export const CollectionRecipes = () => {
   }, []);
 
   //loading state (Need to set this, so rendering doesn't happen BEFORE fetch!)
-  if (loading) {
-    return (
-      <div className="spinner-container">
-        <LoaderKnife />
-        <p>
-          Loading recipes. Be patient, this might take a minute or
-          two!
-        </p>
-      </div>
-    );
-  }
+  // if (loading) {
+  //   return (
+  //     <div className="spinner-container">
+  //       <LoaderKnife />
+  //       <p>
+  //         Loading recipes. Be patient, this might take a minute or
+  //         two!
+  //       </p>
+  //     </div>
+  //   );
+  // }
 
   // Slice the recipes array to get only the first 12 recipes
   const limitedRecipes = recipes.slice(0, 12);
@@ -55,30 +55,39 @@ export const CollectionRecipes = () => {
   // Render the component with a list of recipes (map over the recipes and render each recipe's ingredients and instructions)
   return (
     <section className="collection-recipes">
-      {/* Error message from RecipeStore rendered if there was something wrong during generation */}
-      {errorMessageGeneration && (
-        <div className="error-message-container">
-          <p className="error-message-generation">{errorMessageGeneration}</p>
-        </div>
-      )}
-
-      {/* Error message from RecipeStore rendered if something is wrong with the fetch/database/Render */}
-      {errorMessageFetchAll && (
-        <div className="error-message-container">
-          <p className="error-message-generation">{errorMessageFetchAll}</p>
-        </div>
-      )}
-
-      {/* Conditionally render the heading only when it is no error message for fetching all recipes */}
-
       <div className="collection-recipes-wrapper">
         <h1>Latest Recipes</h1>
-
-        <div className="recipe-grid">
-          {limitedRecipes.map((recipe, index) => (
-            <CollectionRecipe key={recipe._id} recipe={recipe} index={index} />
-          ))}
-        </div>
+        {/* Conditional rendering based on the loading state */}
+        {loading ? (
+          <div className="spinner-container">
+            <LoaderKnife />
+            <p>
+              Loading recipes. Be patient, this might take a minute or two!
+            </p>
+          </div>
+        ) : (
+          // Display error messages and recipe grid when loading is false
+          <>
+            {errorMessageGeneration && (
+              <div className="error-message-container">
+                <p className="error-message-generation">{errorMessageGeneration}</p>
+              </div>
+            )}
+  
+            {errorMessageFetchAll && (
+              <div className="error-message-container">
+                <p className="error-message-generation">{errorMessageFetchAll}</p>
+              </div>
+            )}
+  
+            {/* Conditionally render the heading only when there is no error message for fetching all recipes */}
+            <div className="recipe-grid">
+              {limitedRecipes.map((recipe, index) => (
+                <CollectionRecipe key={recipe._id} recipe={recipe} index={index} />
+              ))}
+            </div>
+          </>
+        )}
       </div>
     </section>
   );

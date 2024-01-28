@@ -7,43 +7,10 @@
     align-items: center;
 }
 
-.header a {
-    color: #286052;
-}
-
-.header-logo {
-    width: 230px;
-    margin-top: 10px;
-    margin-bottom: 10px;
-}
-
 .logo-heading {
    font-weight: 300;
    font-size: 40px;
    margin: 10px 0; 
-}
-
-.header nav ul {
-    display: flex;
-    justify-content: center;
-    gap: 20%;
-    list-style: none;
-    margin-right: 4%;
-}
-
-.header-nav svg {
-    color: #173e34;
-    background: white;
-    padding: 10%;
-    border-radius: 50%;
-    stroke-width: 0.5;
-    /* Changes how bold the strokes are in the react icons */
-}
-
-
-/* Hover effects */
-.header-nav svg:hover {
-    color: rgba(84, 101, 65, 0.5);
 }
 
 

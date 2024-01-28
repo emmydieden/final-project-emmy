@@ -1,7 +1,5 @@
-.outer-wrapper {
-    display: flex;
-  flex-direction: column;
-  align-items: center;
+.new-recipe-details {
+    border-bottom: 3px solid #273006; 
 }
 
 .new-recipe-section {

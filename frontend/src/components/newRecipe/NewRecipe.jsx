@@ -54,7 +54,7 @@ export const NewRecipe = () => {
         </div>
       ) : (
         <section
-          className="recipe-details"
+          className="recipe-details new-recipe-details"
           ref={recipeDetailsRef}
         >
           <div className="outer-wrapper">

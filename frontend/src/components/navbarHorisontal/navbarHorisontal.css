@@ -1,0 +1,16 @@
+.navbar-horisontal {
+    display: none; 
+}
+
+/* ---------TABLET VIEW---------- */
+@media (min-width: 667px) and (max-width: 1024px) {
+  
+}
+
+/* ---------DESKTOP VIEW---------- */
+@media (min-width: 1025px) {
+    .navbar-horisontal {
+        display: flex; 
+    }
+  
+}
