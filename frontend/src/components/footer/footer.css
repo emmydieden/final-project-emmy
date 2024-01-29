@@ -26,11 +26,12 @@
 .footer nav ul {
     display: flex;
     justify-content: center;
-    gap: 30%;
+    gap: 20px;
     list-style: none;
     padding: 0;
-    margin-top: 2%;
+    margin-top: 10px; 
     /* Removing default padding */
+    font-size: 14px; 
 }
 
 .footer-nav a {
@@ -58,18 +59,9 @@
 
 /* ---------TABLET VIEW---------- */
 @media (min-width: 667px) and (max-width: 1024px) {
-    .footer-logo {
-        width: 200px;
-    }
+    
 }
 
 /* ---------DESKTOP VIEW---------- */
 @media (min-width: 1025px) {
-    .footer {
-        flex-direction: row;
-    }
-
-    .footer-logo {
-        width: 200px;
-    }
 }

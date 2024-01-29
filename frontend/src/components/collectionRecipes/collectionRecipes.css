@@ -30,7 +30,7 @@
 
 .recipe-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(1, 1fr);
     gap: 1rem;
    
 }
@@ -82,6 +82,14 @@
         transform: rotate(360deg);
     }
 }
+
+/* ---------IN BETWEEN VIEW---------- */
+@media (min-width: 430px) and (max-width: 666px) {
+    .recipe-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
 
 
 

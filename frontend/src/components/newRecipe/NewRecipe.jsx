@@ -8,7 +8,6 @@ import { RecipeInfoDetails } from "../recipeDetailsComponents/recipeInfoDetails/
 import { ImageDetails } from "../recipeDetailsComponents/imageDetails/ImageDetails";
 import { DescriptionDetails } from "../recipeDetailsComponents/descriptionDetails/DescriptionDetails";
 import { TabButton } from "../buttons/tabButton/TabButton";
-import { IoIosArrowBack } from "react-icons/io";
 import { Spinner } from "../spinner/Spinner";
 
 export const NewRecipe = () => {
@@ -45,7 +44,6 @@ export const NewRecipe = () => {
   
       {isGenerating ? (
         <div className="spinner-container-new" ref={recipeDetailsRef}>
-          <IoIosArrowBack/>
           {" "}
           {/*CSS for spinner in App.css and collectionRecipes.css*/}
           <Spinner />

@@ -1,6 +1,7 @@
 import "./recipeDetails.css";
 //Importing hooks
 import { useParams, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 //Importing components
 import { RecipeInfoDetails } from "../../components/recipeDetailsComponents/recipeInfoDetails/RecipeInfoDetails";
@@ -80,7 +81,8 @@ export const RecipeDetails = () => {
     <>
       <section className="recipe-details">
       <div className="outer-wrapper">
-        <div className="arrow-container"> <IoIosArrowBack/></div>
+        
+      <Link className="arrow-container" to="/"> <IoIosArrowBack/></Link>
      
         <div className="details-content-wrapper">
           {/* <div className="details-image-container"></div> */}

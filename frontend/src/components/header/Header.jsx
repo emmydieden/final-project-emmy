@@ -1,5 +1,4 @@
 //This component is mounted in App.jsx
-import { useState } from "react";
 import "./header.css";
 import { Link } from "react-router-dom";
 import { NavbarHorisontal } from "../navbarHorisontal/NavbarHorisontal";
@@ -22,7 +21,7 @@ export const Header = () => {
           <strong>Open</strong>AI<strong>rFeast</strong>
         </h1>
       </Link>
-      <div className="hamburger-button" onClick={toggleMenu}>{hamburgerOpen ? <HamburgerMenu /> : <HamburgerCross />}</div>
+      <div className="hamburger-button" onClick={toggleMenu}>{hamburgerOpen ? <HamburgerCross  /> : <HamburgerMenu />}</div>
       <NavbarHorisontal />
     </div>
   );
