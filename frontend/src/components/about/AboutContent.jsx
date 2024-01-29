@@ -17,7 +17,7 @@ export const AboutContent = () => {
       <div className="vision-tech-info">
         {/* Vision Section */}
         <div className="about-vision">
-          <img src="/public/icons/vision-icon.svg" alt="" />
+          <img src="/src/assets/icons/vision-icon.svg" alt="" />
           <div className="about-vision-container">
           <p>
             <strong>Vision</strong> • Our vision is to make it easier for people to connect with nature
@@ -28,7 +28,7 @@ export const AboutContent = () => {
 
         {/* Tech Section */}
         <div className="about-tech">
-          <img src="/public/icons/tech-icon.svg" alt="" />
+          <img src="/src/assets/icons/tech-icon.svg" alt="" />
           <div className="about-tech-container">
           <p>
           <strong>Tech</strong> • React, CSS3, HTML5, Node.js, Express, MongoDB, Mongoose and integration with the OpenAI API for recipe generation.
@@ -38,7 +38,7 @@ export const AboutContent = () => {
 
         {/* Project Information */}
         <div className="project-info">
-          <img src="/public/icons/compass-icon.svg" alt="" />
+          <img src="/src/assets/icons/compass-icon.svg" alt="" />
           <div className="project-info-container">
             <p>
             <strong>Explore</strong> • Navigate through the{" "}
