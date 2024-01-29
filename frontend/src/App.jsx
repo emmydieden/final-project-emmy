@@ -6,7 +6,7 @@ import { BrowserRouter, Routes } from "react-router-dom";
 import routes from "./routes/routes";
 
 import { Header } from "./components/header/Header";
-import { NavbarVertical } from "./components/navbarVertical/navbarVertical";
+import { NavbarVertical} from "./components/navbarVertical/NavbarVertical"
 import { Footer } from "./components/footer/Footer";
 import { recipeStore } from "./stores/recipeStore";
 
