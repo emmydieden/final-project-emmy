@@ -17,7 +17,6 @@ export const NewRecipe = () => {
     fetchCollectionRecipes,
     isGenerating,
   } = recipeStore();
-  const [isMobileView, setIsMobileView] = useState(window.innerWidth < 1025);
   const recipeDetailsRef = useRef(null); //This is for scrolling
 
   useEffect(() => {

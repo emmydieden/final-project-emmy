@@ -31,8 +31,7 @@ export const AboutContent = () => {
           <img src="/public/icons/tech-icon.svg" alt="" />
           <div className="about-tech-container">
           <p>
-          <strong>Tech</strong> • React, JavaScript, Zustand, HTML, OpenAI, MongoDB/Atlas, CSS,
-            React Router, Node, Express, Render, Netlify.
+          <strong>Tech</strong> • React, CSS3, HTML5, Node.js, Express, MongoDB, Mongoose and integration with the OpenAI API for recipe generation.
           </p>
           </div>
         </div>

@@ -45,6 +45,22 @@ label {
   align-items: center;
 }
 
+.spinner-container-new {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #286052;
+  margin-bottom: 100px; 
+  height: 100vh; 
+}
+
+.spinner-container-new p{
+  color: #273006;
+  font-size: 16px;
+  font-weight: 600;
+}
+
 /* ---------TABLET VIEW---------- */
 @media (min-width: 667px) and (max-width: 1024px) {
 
@@ -63,6 +79,10 @@ label {
   
   label {
     font-size: 18px; 
+  }
+
+  .spinner-container-new p{
+    font-size: 18px;
   }
   
 
@@ -88,20 +108,9 @@ label {
     font-size: 18px; 
   }
 
+  .spinner-container-new p{
+    font-size: 18px;
+  }
+
 }
 
-.spinner-container-new {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  color: #286052;
-  margin: 50px; 
-  height: 100vh; 
-}
-
-.spinner-container-new p{
-  color: #273006;
-  font-size: 16px;
-  font-weight: 600;
-}
