@@ -39,8 +39,6 @@ export const NewRecipe = () => {
 
   return (
     <>
-    
-  
       {isGenerating ? (
         <div className="spinner-container-new" ref={recipeDetailsRef}>
           {" "}
@@ -58,15 +56,6 @@ export const NewRecipe = () => {
           <div className="details-content-wrapper">
             <HeadingDetails title={newRecipe.title} />
             <RecipeInfoDetails userInput={newRecipe.userInput} />
-            <div className="details-image-container">
-              <ImageDetails
-                src="/public/icons/cooking-fire.svg"
-                alt="outdoor cooking"
-              />
-              <div className="details-image-gradient-overlay"></div>{" "}
-              {/* Adding this overlay div for the gradient */}
-            </div>
-
             <DescriptionDetails description={newRecipe.description} />
             <TabButton
               ingredients={newRecipe.ingredients}

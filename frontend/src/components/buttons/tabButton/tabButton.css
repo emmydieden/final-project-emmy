@@ -11,12 +11,15 @@
     border-right: solid white 5px;
     padding: 1em;
     font-weight: 600;
+    color:  #273006;
 }
 
 .tab-button-method {
     border: none;
     background: transparent;
     padding: 1em;
+    color:  #273006;
+    font-weight: 600;
 }
 
 .tab-button-method.active,
